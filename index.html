@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>VigilSek — Offensive Security</title>
 <meta name="description" content="Offensive security for SaaS and fintech. In-house models for discovery at scale, human-verified exploitation, evidence your auditor accepts.">
@@ -68,6 +71,19 @@ h1 br{display:block;content:"";margin-top:2px}
 .item p{margin:0;color:var(--dim);font-size:13px;max-width:56ch}
 .item .no{color:var(--faint)}
 
+
+/* credibility */
+.creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 30px}
+.cred{border:1px solid var(--line);border-radius:3px;padding:13px 14px}
+.cred b{display:block;font-size:19px;font-weight:500;color:var(--accent);letter-spacing:-.03em}
+.cred span{font-size:11px;color:var(--dim);letter-spacing:.05em}
+.certs{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 0}
+.certs i{font-style:normal;border:1px solid var(--line);border-radius:2px;
+  padding:4px 10px;font-size:11px;letter-spacing:.08em;color:var(--fg)}
+.orgs{color:var(--dim);font-size:13px;margin:0}
+.orgs b{color:var(--fg);font-weight:500}
+.disc{color:var(--faint);font-size:11.5px;margin:16px 0 0;line-height:1.6}
+
 /* contact */
 .contact{border-top:1px solid var(--line);margin-top:46px;padding:46px 0 0}
 .contact a.mail{color:var(--accent);font-size:17px;text-decoration:none;letter-spacing:-.02em}
@@ -93,7 +109,7 @@ footer a{color:var(--faint)}
 <nav>
   <span class="mark">VIGIL<i>SEK</i></span>
   <span class="links">
-    <a href="#platform">Platform</a><a href="#work">Testing</a><a href="#method">Method</a><a href="#contact">Contact</a>
+    <a href="#platform">Platform</a><a href="#track">Track record</a><a href="#work">Testing</a><a href="#method">Method</a><a href="#contact">Contact</a>
     <button id="t" aria-label="Toggle theme">◐</button>
   </span>
 </nav>
@@ -131,6 +147,37 @@ footer a{color:var(--faint)}
     <p class="ln">One bug is a template.</p>
     <p>When something is confirmed, we sweep the rest of your estate for the same pattern.
     Single findings are rarely single.</p></div></div>
+</section>
+
+<section class="sec" id="track">
+  <h2>TRACK RECORD</h2>
+
+  <div class="creds">
+    <div class="cred"><b>100+</b><span>ORGANISATIONS</span></div>
+    <div class="cred"><b>10+</b><span>CERTIFICATIONS</span></div>
+    <div class="cred"><b>4</b><span>MAJOR VENDOR CREDITS</span></div>
+  </div>
+
+  <div class="item"><div class="lbl">RECOGNITION</div><div>
+    <p class="ln">Credited by vendor security teams.</p>
+    <p class="orgs">Our researchers have been acknowledged for valid vulnerability reports by
+    <b>Google</b>, <b>Meta</b>, <b>Microsoft</b> and <b>Apple</b> security teams, through their
+    coordinated disclosure programmes.</p></div></div>
+
+  <div class="item"><div class="lbl">CERTIFICATIONS</div><div>
+    <p class="ln">Held across the team.</p>
+    <div class="certs">
+      <i>OSCP</i><i>OSWE</i><i>CWEE</i><i>eWPTX</i><i>eMAPT</i>
+    </div></div></div>
+
+  <div class="item"><div class="lbl">REPORTED</div><div>
+    <p class="ln">Findings in production, not labs.</p>
+    <p class="orgs">We have reported confirmed vulnerabilities to more than <b>100 organisations</b>
+    across fintech, insurtech, logistics, events and payments — through their security and
+    coordinated-disclosure programmes.</p>
+    <p class="disc">We do not name organisations we have tested. Most disclosure programmes
+    restrict publicising participation, and we treat that as binding whether or not anyone is
+    watching. References are available on request, with the organisation's consent.</p></div></div>
 </section>
 
 <section class="sec" id="work">
