@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VigilSek — Offensive Security</title>
+<meta name="description" content="Offensive security for SaaS and fintech. In-house models for discovery at scale, human-verified exploitation, evidence your auditor accepts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b; --fg:#e7e3da; --dim:#8b8880; --faint:#4a4844;
+  --line:#1e1e20; --accent:#d8ff3e;
+}
+:root[data-theme="light"]{
+  --bg:#f4f2ed; --fg:#15151a; --dim:#5f5c55; --faint:#b3afa6;
+  --line:#dcd8d0; --accent:#1a1a1a;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:14px;line-height:1.7;letter-spacing:-0.01em;
+  background-image:radial-gradient(circle at 15% 5%,rgba(216,255,62,.035),transparent 55%);
+  background-attachment:fixed;
+}
+.w{max-width:760px;margin:0 auto;padding:0 20px}
+
+/* ticker */
+.ticker{border-bottom:1px solid var(--line);font-size:11.5px;color:var(--dim);
+  padding:9px 0;letter-spacing:0}
+.ticker b{color:var(--fg);font-weight:500}
+
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;
+  padding:26px 0 0;font-size:12.5px}
+.mark{font-weight:700;letter-spacing:.12em;font-size:13px}
+.mark i{color:var(--accent);font-style:normal}
+nav .links a{color:var(--dim);text-decoration:none;margin-left:18px}
+nav .links a:hover{color:var(--fg)}
+#t{background:none;border:1px solid var(--line);color:var(--dim);cursor:pointer;
+  font:inherit;font-size:11px;padding:3px 9px;margin-left:18px;border-radius:2px}
+#t:hover{color:var(--fg);border-color:var(--faint)}
+
+/* hero */
+.hero{padding:88px 0 20px}
+.kicker{color:var(--accent);font-size:11.5px;letter-spacing:.14em;margin-bottom:22px}
+h1{font-size:clamp(23px,4.4vw,34px);font-weight:500;line-height:1.35;
+  letter-spacing:-.025em;margin:0 0 24px;max-width:21ch}
+h1 em{font-style:normal;color:var(--dim)}
+h1 br{display:block;content:"";margin-top:2px}
+.sub{color:var(--dim);max-width:58ch;margin:0 0 34px;font-size:13.5px}
+.cta{display:inline-block;border:1px solid var(--accent);color:var(--accent);
+  text-decoration:none;padding:9px 20px;font-size:12.5px;border-radius:2px}
+.cta:hover{background:var(--accent);color:var(--bg)}
+.cta2{border-color:var(--line);color:var(--dim);margin-left:8px}
+.cta2:hover{background:none;color:var(--fg);border-color:var(--faint)}
+
+/* flow sections */
+.sec{border-top:1px solid var(--line);padding:46px 0 10px;margin-top:46px}
+.sec>h2{font-size:12px;font-weight:400;color:var(--faint);letter-spacing:.16em;
+  margin:0 0 34px}
+.item{display:grid;grid-template-columns:148px 1fr;gap:26px;padding:0 0 34px}
+.item .lbl{color:var(--accent);font-size:11px;letter-spacing:.12em;padding-top:3px}
+.item .ln{font-weight:500;margin:0 0 9px;font-size:14.5px;letter-spacing:-.02em}
+.item p{margin:0;color:var(--dim);font-size:13px;max-width:56ch}
+.item .no{color:var(--faint)}
+
+/* contact */
+.contact{border-top:1px solid var(--line);margin-top:46px;padding:46px 0 0}
+.contact a.mail{color:var(--accent);font-size:17px;text-decoration:none;letter-spacing:-.02em}
+.contact a.mail:hover{text-decoration:underline}
+footer{color:var(--faint);font-size:11.5px;padding:56px 0 48px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer a{color:var(--faint)}
+@media(max-width:620px){
+  .item{grid-template-columns:1fr;gap:7px}
+  .item .lbl{padding-top:0}
+  nav .links a{margin-left:12px}
+  .hero{padding:56px 0 10px}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker"><div class="w">
+  <b>How we work</b> &nbsp;/&nbsp; Models surface the candidates. People prove the impact. Nothing ships unverified.
+</div></div>
+
+<div class="w">
+<nav>
+  <span class="mark">VIGIL<i>SEK</i></span>
+  <span class="links">
+    <a href="#platform">Platform</a><a href="#work">Testing</a><a href="#method">Method</a><a href="#contact">Contact</a>
+    <button id="t" aria-label="Toggle theme">◐</button>
+  </span>
+</nav>
+
+<section class="hero">
+  <div class="kicker">OFFENSIVE SECURITY</div>
+  <h1>We build the models that find it.<br><em>We prove it by hand.</em></h1>
+  <p class="sub">Our own models read your attack surface at a scale a team cannot — every
+  endpoint, parameter and auth path. Then our testers take the candidates and establish what
+  is actually exploitable. You get proven findings, not a scanner's queue.</p>
+  <a class="cta" href="#contact">Request scope &amp; quote</a>
+  <a class="cta cta2" href="#method">How we work</a>
+</section>
+
+<section class="sec" id="platform">
+  <h2>DISCOVERY AT SCALE</h2>
+
+  <div class="item"><div class="lbl">MODELS</div><div>
+    <p class="ln">Built in-house, tuned on real findings.</p>
+    <p>We develop our own models for surface mapping and vulnerability discovery, trained and
+    refined against the classes we actually confirm in engagements — access control, tenant
+    isolation, authentication logic.</p></div></div>
+
+  <div class="item"><div class="lbl">COVERAGE</div><div>
+    <p class="ln">Every endpoint, not a sample.</p>
+    <p>Automated reasoning over the full surface — every route, parameter and role combination —
+    so nothing is skipped because it looked uninteresting at 2am.</p></div></div>
+
+  <div class="item"><div class="lbl">TRIAGE</div><div>
+    <p class="ln">A candidate is not a finding.</p>
+    <p>Model output is a lead. Every lead is adversarially tested, run against a negative control,
+    and killed if it does not survive. Most do not. That is the point.</p></div></div>
+
+  <div class="item"><div class="lbl">VARIANTS</div><div>
+    <p class="ln">One bug is a template.</p>
+    <p>When something is confirmed, we sweep the rest of your estate for the same pattern.
+    Single findings are rarely single.</p></div></div>
+</section>
+
+<section class="sec" id="work">
+  <h2>WHAT WE TEST</h2>
+
+  <div class="item"><div class="lbl">WEB &amp; API</div><div>
+    <p class="ln">Authorisation, not just input validation.</p>
+    <p>Cross-tenant access, object-level and function-level authorisation, GraphQL resolvers,
+    older API versions still mounted beside the current one.</p></div></div>
+
+  <div class="item"><div class="lbl">MOBILE</div><div>
+    <p class="ln">The API contract behind the app.</p>
+    <p>Android and iOS clients, and the endpoints they reveal — usually a wider and older
+    surface than the web application exposes.</p></div></div>
+
+  <div class="item"><div class="lbl">CLOUD</div><div>
+    <p class="ln">Perimeter, identity, segmentation.</p>
+    <p>External exposure, cloud IAM, storage permissions, and whether network segmentation
+    holds when you actually push on it.</p></div></div>
+
+  <div class="item"><div class="lbl">COMPLIANCE</div><div>
+    <p class="ln">Scoped backwards from your audit date.</p>
+    <p>SOC 2, ISO 27001 and PCI DSS 11.4. Reported in the shape auditors accept — scope,
+    methodology, severity, and documented retest of the fixes.</p></div></div>
+</section>
+
+<section class="sec" id="method">
+  <h2>HOW WE WORK</h2>
+
+  <div class="item"><div class="lbl">01 / EVIDENCE</div><div>
+    <p class="ln">One command reproduces it.</p>
+    <p>Each finding ships with the exact request that triggers it and a control showing what
+    a correct response looks like. Your engineer pastes it, sees it, fixes it, re-runs it.
+    No "the application may be vulnerable to".</p></div></div>
+
+  <div class="item"><div class="lbl">02 / TIMING</div><div>
+    <p class="ln">Findings as they are confirmed.</p>
+    <p>Not a PDF at the end. Remediation starts in week one, while we are still testing —
+    which is also how the retest fits before your audit date.</p></div></div>
+
+  <div class="item"><div class="lbl">03 / RETEST</div><div>
+    <p class="ln">Included, not a line item.</p>
+    <p>Verification of your fixes is part of the engagement. It is the evidence an auditor
+    asks for, and charging separately for it has never made sense to us.</p></div></div>
+
+  <div class="item"><div class="lbl">04 / SCOPE</div><div>
+    <p class="ln no">What we could not reach, and why.</p>
+    <p>Stated plainly in the report. We would rather hand you a short honest list than pad
+    it with informational findings nobody will action.</p></div></div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 style="font-size:12px;font-weight:400;color:var(--faint);letter-spacing:.16em;margin:0 0 20px">GET IN TOUCH</h2>
+  <p style="color:var(--dim);max-width:56ch;margin:0 0 20px;font-size:13px">
+  Send your stack, rough scope, and whether the test is tied to an audit date.
+  You will get scope and a quote back, not a discovery call.</p>
+  <a class="mail" href="mailto:m.sherif@vigilsek.com">m.sherif@vigilsek.com</a>
+</section>
+
+<footer>
+  <span>VIGILSEK &nbsp;·&nbsp; <span id="y">2026</span></span>
+  <span><a href="/.well-known/security.txt">security.txt</a></span>
+</footer>
+</div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+(function(){
+  var r=document.documentElement,b=document.getElementById('t'),k='vs-theme';
+  try{var s=localStorage.getItem(k); if(s)r.setAttribute('data-theme',s);}catch(e){}
+  b.addEventListener('click',function(){
+    var cur=r.getAttribute('data-theme')==='light'?'':'light';
+    if(cur)r.setAttribute('data-theme','light');else r.removeAttribute('data-theme');
+    try{localStorage.setItem(k,cur);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
